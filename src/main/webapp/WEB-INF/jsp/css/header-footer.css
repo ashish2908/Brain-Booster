@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+
+/* Bootstrap css */
+@IMPORT url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@IMPORT url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css");
+@IMPORT url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+/* Google Font */
+@IMPORT url("https://fonts.googleapis.com/css?family=Pacifico");
+
+#header
+{
+	font-family: Pacifico; 
+}
+
+#footer
+{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+#header, #footer
+{
+	background-color: #3F729B;
+	color: White;
+}
+
+body
+{
+	padding-bottom: 6rem;
+  	min-height: 100%;
+}

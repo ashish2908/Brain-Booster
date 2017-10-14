@@ -1,0 +1,87 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- Component Scanning Enabled -->
+	<context:component-scan base-package="com" />
+	<mvc:annotation-driven />
+
+	<!-- Defined Transaction Manager -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- Classes extending HibernateDaoSupport -->
+	<bean id="questionDaoImpl" class="com.ashish.daoImpl.QuestionDaoImpl">
+		<qualifier value="QuestionDaoImpl"></qualifier>
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="subjectDaoImpl" class="com.ashish.daoImpl.SubjectDaoImpl">
+		<qualifier value="SubjectDaoImpl"></qualifier>
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="userDaoImpl" class="com.ashish.daoImpl.UserDaoImpl">
+		<qualifier value="UserDaoImpl"></qualifier>
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="resultDaoImpl" class="com.ashish.daoImpl.ResultDaoImpl">
+		<qualifier value="ResultDaoImpl"></qualifier>
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- Defining MYSQL Data Source  -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://db4free.net:3307/online_quiz" />
+		<property name="username" value="ashish" />
+		<property name="password" value="bf5f29" />
+	</bean>
+
+	<!-- Defining SessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.ashish.model.Subject</value>
+				<value>com.ashish.model.Question</value>
+				<value>com.ashish.model.User</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- View Resolver is defined -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="mailProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="location" value="classpath:quiz.properties" />
+	</bean>
+    
+    <!-- External resources are mapped to physical location -->
+    <mvc:resources mapping="/images/**" location="/WEB-INF/jsp/images/"/>
+   	<mvc:resources mapping="/quizView/js/**" location="/WEB-INF/jsp/js/"/>
+    <mvc:resources mapping="/quizView/css/**" location="/WEB-INF/jsp/css/"/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/jsp/js/"/>
+    <mvc:resources mapping="/css/**" location="/WEB-INF/jsp/css/"/>
+   
+</beans>

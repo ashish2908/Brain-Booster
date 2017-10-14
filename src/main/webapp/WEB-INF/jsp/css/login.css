@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+#loginForm
+{
+	margin-top: 10%;
+}
+
+#loginformdiv
+{
+	margin-top: 3%;
+}
+
+#disclaimer
+{
+	color: #FF8800; 
+	margin-top: 1%;
+}
+
+#img
+{
+	width: 500px; 
+	max-height: 450px; 
+	height: 450px;
+}
+
+#logindiv
+{
+	padding: 0;
+}
+
+#welcome
+{
+	text-align: center; 
+	margin: 0;
+}
+

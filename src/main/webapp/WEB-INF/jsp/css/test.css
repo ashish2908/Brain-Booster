@@ -1,0 +1,139 @@
+@CHARSET "ISO-8859-1";
+
+#user-profile-info
+{
+	background-color: #e8eaf6;
+	color: #3F729B;
+}
+
+.img-circle
+{
+	height: 80px;
+	width: 80px;
+}
+
+.pagination
+{
+	font-size: large;
+	display: inline-block;
+}
+
+.subjectname
+{
+	font-size: large;
+}
+
+.btn
+{
+	margin: 5%;
+}
+
+li > a
+{
+	width: 40px; 
+	padding: 5px 5px 5px 5px; 
+	text-align: center;
+}
+
+#question-string
+{
+	color: #3F729B;
+	margin-top: 1%;
+}
+
+#options
+{
+	color: #3F729B;
+}
+
+.span-option
+{
+	display:table-cell;
+	vertical-align:middle;
+	background-color:#3F729B;
+	padding: 0 .5em 0 1em; 
+	line-height:1;
+}
+
+.option
+{
+	margin-right: 15%;
+	margin-top: 5%;
+	font-weight: bold;
+	background-color: white; 
+	border: thin; 
+	color: White
+}
+
+.option:before, .option:after 
+{
+	display:table-cell;
+	content:'';
+	border-top:1.5em solid;
+	border-bottom:1.5em solid;
+	border-left:1.5em solid;
+}
+.option:before 
+{
+	border-top-color:#3F729B;
+	border-bottom-color:#3F729B;
+	border-left-color:transparent;
+}
+.option:after 
+{
+	border-top-color:transparent;
+	border-bottom-color:transparent;
+	border-left-color:#3F729B;
+}
+
+.option:hover span  
+{
+	background-color: #33b5e5;
+}
+.option:hover:before 
+{
+	border-top-color: #33b5e5;
+	border-bottom-color: #33b5e5;
+}
+.option:hover:after 
+{
+	border-left-color: #33b5e5;
+}
+
+#countdown #tiles
+{
+	color: #fff;
+	text-align: center;
+  	font-size: x-large;
+  	height: 80px;
+  	width: 80px;
+  	border-radius: 50%;
+}
+
+.color-full 
+{
+  background: #3F729B;
+}
+.color-half 
+{
+  background: #ebc85d;
+}
+.color-empty
+{
+  background: #e5554e;
+}
+
+.timer
+{
+	padding-top: 35%;
+}
+
+.instructions {
+	margin-top: 1%;
+	color: #3F729B;
+}
+
+#piechart_3d {
+	width: 100%; 
+	height: 70%;
+}

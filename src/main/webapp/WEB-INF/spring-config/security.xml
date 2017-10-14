@@ -1,0 +1,26 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+    <!-- Spring MVC based authentication, login page etc.  -->
+    <http>
+        <intercept-url pattern="/quizView/**" access="hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/quiz/**" access="hasRole('ROLE_USER')"/>
+		<form-login login-page="/" login-processing-url="/login" authentication-failure-url="/" default-target-url="/quizView/portfolio" />
+		<logout logout-success-url="/quizView/test"/>
+      <csrf disabled="true"/>
+    </http> 
+  	
+  	<!--   Declared authentication manager -->
+    <authentication-manager alias="authenticationManager">
+	    <authentication-provider ref="quizAuthenticationProvider" />
+	</authentication-manager>
+	<!-- Bean implementing AuthenticationProvider of Spring Security -->
+	<beans:bean id="quizAuthenticationProvider" class="com.ashish.util.QuizUtilImpl">
+	</beans:bean>
+    
+ </beans:beans>
