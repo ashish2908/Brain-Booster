@@ -9,7 +9,7 @@ app.controller("Portfolio", function($scope, $http, $window)
 		$http
 		({
 			method : 'GET',
-			url : 'http://localhost:8080/Online_Quiz/quiz/loggedInUser',
+			url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/loggedInUser',
 			withCredentials : "true",
 			headers : 
 			{
@@ -30,7 +30,7 @@ app.controller("Portfolio", function($scope, $http, $window)
 		$http
 		({
 			method : 'GET',
-			url : 'http://localhost:8080/Online_Quiz/quiz/getSubjects',
+			url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/getSubjects',
 			withCredentials : "true",
 			headers : 
 			{
@@ -68,7 +68,7 @@ app.controller("Portfolio", function($scope, $http, $window)
 		$http
 		({
 			method : 'POST',
-			url : 'http://localhost:8080/Online_Quiz/selectedsubject',
+			url : 'https://1-dot-regal-tract-153809.appspot.com/selectedsubject',
 			data : $scope.subjectString,
 			withCredentials : "true",
 			headers : 

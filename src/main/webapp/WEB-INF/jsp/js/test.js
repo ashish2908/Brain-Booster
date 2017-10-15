@@ -98,7 +98,7 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		$http
 		({
 			method : 'POST',
-			url : 'http://localhost:8080/Online_Quiz/saveMarks',
+			url : 'https://1-dot-regal-tract-153809.appspot.com/saveMarks',
 			data : count,
 			withCredentials : "true",
 			headers : 
@@ -120,7 +120,7 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		$http
 		({
 			method : 'GET',
-			url : 'http://localhost:8080/Online_Quiz/quiz/loggedInUser',
+			url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/loggedInUser',
 			withCredentials : "true",
 			headers : 
 			{
@@ -142,7 +142,7 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		$http(
 			{
 			    method : 'GET',
-			    url : 'http://localhost:8080/Online_Quiz/quiz/getQuestions',
+			    url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/getQuestions',
 			    withCredentials : "true",
 			    headers : {
 				'Accept' : 'application/json',
@@ -245,6 +245,6 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		 {
 		 	return (n < 10 ? '0' : '') + n;
 		 }
-
+   
 	 }
 });

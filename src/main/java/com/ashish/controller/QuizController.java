@@ -9,12 +9,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.ashish.model.User;
 
 @Controller
-@RequestMapping("/quizView")
+@RequestMapping("/")
 public class QuizController 
 {
     public static User user = new User();
     public static String subject;
     public static int marks;
+    
+    @RequestMapping(value = "/")
+    public String login()
+    {
+    	return "login"; 
+    }
     
     @RequestMapping(value = "loggedInUser", method = RequestMethod.POST)
     public @ResponseBody User loggedin(@RequestBody User userArg)

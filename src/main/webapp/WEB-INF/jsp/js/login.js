@@ -11,7 +11,7 @@ app.controller("Login", function($scope, $http, $window) {
 		$http
 		({
 			method : 'POST',
-			url : 'http://localhost:8080/Online_Quiz/loggedInUser',
+			url : 'https://1-dot-regal-tract-153809.appspot.com/loggedInUser',
 			data : angular.toJson($scope.user),
 			withCredentials : "true",
 			headers : 

@@ -19,7 +19,7 @@
 			<div class="row" id="header">
 				<div class="col-md-12">
 					<div class="col-md-4">
-						<h1><span class="glyphicon glyphicon-education"></span> Brain Booster Quiz ...</h1>
+						<h1><span class="glyphicon glyphicon-education"></span> Brain Booster Quiz</h1>
 					</div>
 				</div>			
 			</div>

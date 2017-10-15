@@ -28,7 +28,7 @@ import com.ashish.model.User;
 import com.ashish.util.QuizUtil;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("quiz")
 public class QuizRestController
 {
     @Autowired

@@ -16,5 +16,6 @@
   <application>regal-tract-153809</application>
   <version>1</version>
   <threadsafe>true</threadsafe>
+  <sessions-enabled>true</sessions-enabled>
 </appengine-web-app>
 <!-- [END config] -->

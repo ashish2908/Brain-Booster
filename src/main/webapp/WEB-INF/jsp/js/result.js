@@ -9,7 +9,7 @@ app.controller("result", function($scope, $http, $window)
 		$http(
 			{
 			    method : 'GET',
-			    url : 'http://localhost:8080/Online_Quiz/quiz/getResult',
+			    url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/getResult',
 			    withCredentials : "true",
 			    headers : {
 				'Accept' : 'application/json',

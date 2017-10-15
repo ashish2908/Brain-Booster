@@ -1,36 +1,61 @@
 @CHARSET "ISO-8859-1";
 
-#loginForm
-{
-	margin-top: 10%;
-}
-
-#loginformdiv
-{
-	margin-top: 3%;
-}
-
 #disclaimer
 {
 	color: #FF8800; 
 	margin-top: 1%;
+	bottom: 0;
 }
 
-#img
+h1
 {
-	width: 500px; 
-	max-height: 450px; 
-	height: 450px;
+	font-weight: bold;
+	color: #3F729B;
 }
 
-#logindiv
+.socialbtn
 {
-	padding: 0;
+	background-color: #fff;
+	border-radius: 50%; 
+	height: 50px; 
+	width: 50px;
+	border-width: thin;
+	font-size: 30px;
+	margin: 1%;
 }
 
-#welcome
+.fb
 {
-	text-align: center; 
-	margin: 0;
+	color: #4060A5;
+	border-color: #4060A5;
 }
 
+.tw
+{
+	border-color: #00ABE3; 
+	color: #00ABE3;
+}
+
+.pi
+{
+	border-color: #cb2027;
+	color: #cb2027;
+}
+
+.fb:HOVER 
+{
+	background-color: #4060A5;
+	color: white;
+}
+
+.tw:HOVER 
+{
+	background-color: #00ABE3;
+	color: white;
+}
+
+.pi:HOVER 
+{
+	background-color: #cb2027;
+	color: white;
+}
