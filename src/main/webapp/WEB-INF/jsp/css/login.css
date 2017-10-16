@@ -1,12 +1,4 @@
 @CHARSET "ISO-8859-1";
-
-#disclaimer
-{
-	color: #FF8800; 
-	margin-top: 1%;
-	bottom: 0;
-}
-
 h1
 {
 	font-weight: bold;
@@ -58,4 +50,31 @@ h1
 {
 	background-color: #cb2027;
 	color: white;
+}
+
+#loginForm
+{
+	margin-top: 10px;;
+}
+
+#stardiv
+{
+	color:#4060A5;  
+	width: 60%; 
+	height: 20px; 
+	border-bottom: 1px solid black; 
+	text-align: center;
+}
+
+#star
+{
+	font-size: 20px;
+	background-color: #fff; 
+	padding: 10px 20px 0 20px;
+}
+
+#headicon
+{
+	margin-top: 10%; 
+	color:  #3F729B;
 }

@@ -19,31 +19,26 @@
 		<!-- Start Main Container -->
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12" align="center" style="margin-top: 10%; color:  #3F729B;">
+				<div class="col-md-12" align="center" id="headicon">
 					<img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9f1Jp_edyP5BhNyNuCtHuispjff6UaVVZi3U8tpEwAxlYd1vD6g" style="height: 100px; widows: 100px;">
 					<h1><strong>Brain Booster</strong></h1>
-					<h5> Welcome to Brain Booster quiz app, its free and always will be</h5>
+					<h5  style="margin-bottom: 0;"> Welcome to Brain Booster quiz app, its free and always will be</h5>
 				</div>
 			</div>	
 			<div class="row">
 				<div class="col-md-12" align="center">
-					<div align="center" style="width: 30%; height: 20px; border-bottom: 1px solid black; text-align: center">
-      					<span class="fa fa-star-o" style="font-size: 20px; background-color: #fff; padding: 10px 20px 0 20px"></span>
+					<div align="center" id="stardiv">
+      					<span class="fa fa-star-o" id="star"></span>
    					</div>
 				</div>
 			</div>
 			<div class="row"> 
 				<div class="col-md-12" id="logindiv" align="center">
 					<form id="loginForm" action='login' method="post">
-					  	<button class="socialbtn fb" data-ng-click="fbLogin()"><span class="fa fa-facebook" ></span></button>
-					   	<button class="socialbtn tw" data-ng-click="fbLogin()"><span class="fa fa-twitter" ></span></button> 
-					   	<button class="socialbtn pi" data-ng-click="fbLogin()"><span class="fa fa-pinterest" ></span></button> 
+					  	<button class="socialbtn fb" type="button" data-ng-click="fbLogin()"><span class="fa fa-facebook" ></span></button>
+					   	<button class="socialbtn tw" type="button" data-ng-click="fbLogin()"><span class="fa fa-twitter" ></span></button> 
+					   	<button class="socialbtn pi" type="button" data-ng-click="fbLogin()"><span class="fa fa-pinterest" ></span></button> 
 					</form> 
-				</div>
-			</div>
-			<div class="row" id="disclaimer">
-				<div class="col-md-8" id="disclaimer">
-					<h4><strong>Disclaimer: </strong>This is trusted quiz application. We are using authentication API's of facebook, twitter, pinterest. We are not storing any user credentials.</h4>
 				</div>
 			</div>
 		</div>

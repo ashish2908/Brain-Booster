@@ -1,6 +1,6 @@
 var app = angular.module("Login", []);
 
-app.controller("Login", function($scope, $http, $window) {
+app.controller("Login", function($scope, $http, $window, $location) {
 
 	/*This is user object which will be saved once user successfully logged in to application*/
 	$scope.user= {};
@@ -11,7 +11,7 @@ app.controller("Login", function($scope, $http, $window) {
 		$http
 		({
 			method : 'POST',
-			url : 'https://1-dot-regal-tract-153809.appspot.com/loggedInUser',
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/loggedInUser',
 			data : angular.toJson($scope.user),
 			withCredentials : "true",
 			headers : 

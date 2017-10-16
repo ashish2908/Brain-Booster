@@ -1,5 +1,5 @@
 var app = angular.module("Portfolio", []);
-app.controller("Portfolio", function($scope, $http, $window) 
+app.controller("Portfolio", function($scope, $http, $window, $location) 
 {
 	getLoggedInUserInfo();
 	getAllSubjects();
@@ -9,7 +9,7 @@ app.controller("Portfolio", function($scope, $http, $window)
 		$http
 		({
 			method : 'GET',
-			url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/loggedInUser',
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/loggedInUser',
 			withCredentials : "true",
 			headers : 
 			{
@@ -30,7 +30,7 @@ app.controller("Portfolio", function($scope, $http, $window)
 		$http
 		({
 			method : 'GET',
-			url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/getSubjects',
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getSubjects',
 			withCredentials : "true",
 			headers : 
 			{
@@ -68,7 +68,7 @@ app.controller("Portfolio", function($scope, $http, $window)
 		$http
 		({
 			method : 'POST',
-			url : 'https://1-dot-regal-tract-153809.appspot.com/selectedsubject',
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/selectedsubject',
 			data : $scope.subjectString,
 			withCredentials : "true",
 			headers : 

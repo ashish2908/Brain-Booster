@@ -1,6 +1,6 @@
 var app = angular.module("result", []);
 
-app.controller("result", function($scope, $http, $window) 
+app.controller("result", function($scope, $http, $window, $location) 
 {
 	getResult();
 
@@ -9,7 +9,7 @@ app.controller("result", function($scope, $http, $window)
 		$http(
 			{
 			    method : 'GET',
-			    url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/getResult',
+			    url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getResult',
 			    withCredentials : "true",
 			    headers : {
 				'Accept' : 'application/json',

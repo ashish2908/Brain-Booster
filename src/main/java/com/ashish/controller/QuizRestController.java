@@ -89,7 +89,7 @@ public class QuizRestController
     }
     
     /*To get info og user currently logged in*/
-    @RequestMapping(value = "/loggedInUser", method = RequestMethod.GET)
+    @RequestMapping(value = "loggedInUser", method = RequestMethod.GET)
     public User getLoggedInUserInfo()
     {
         return QuizController.user;

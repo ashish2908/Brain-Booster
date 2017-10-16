@@ -1,11 +1,10 @@
 var app = angular.module("OnlineQuiz", []);
 
-app.controller("OnlineQuiz", function($scope, $http, $window) 
+app.controller("OnlineQuiz", function($scope, $http, $window, $location) 
 {
 	/*Global variable*/
 	$scope.questions = []; // Stores questions
 	$scope.loggedInUser = []; // info of logged in user
-	$scope.subjectName = 'CERTIFICATION IN HARDWARE NETWORKING';
 	$scope.answerMap = []; //This map stores question no and answers given by user
 	
 	/*Startup Funtions*/
@@ -98,7 +97,7 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		$http
 		({
 			method : 'POST',
-			url : 'https://1-dot-regal-tract-153809.appspot.com/saveMarks',
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/saveMarks',
 			data : count,
 			withCredentials : "true",
 			headers : 
@@ -120,7 +119,7 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		$http
 		({
 			method : 'GET',
-			url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/loggedInUser',
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/loggedInUser',
 			withCredentials : "true",
 			headers : 
 			{
@@ -142,7 +141,7 @@ app.controller("OnlineQuiz", function($scope, $http, $window)
 		$http(
 			{
 			    method : 'GET',
-			    url : 'https://1-dot-regal-tract-153809.appspot.com/quiz/getQuestions',
+			    url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getQuestions',
 			    withCredentials : "true",
 			    headers : {
 				'Accept' : 'application/json',
