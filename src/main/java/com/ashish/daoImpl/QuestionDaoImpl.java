@@ -44,7 +44,6 @@ public class QuestionDaoImpl extends HibernateDaoSupport implements QuestionDao
             ois.close();
             fin.close();
         }
-        System.out.println(questions.size());
         return questions.subList(0, numberOfQuestions);
     }
 }

@@ -23,16 +23,16 @@
 			<div class="row">
 				<div class="col-md-12" id="user-profile-info" align="center">
 					<div class="col-lg-1" id="profile-photo">
-						<h1><img data-ng-src="{{loggedInUser.profilePhoto}}" class="img-circle img-responsive"></h1>
+						<img data-ng-src="{{loggedInUser.profilePhoto}}" class="img-circle img-responsive">
 					</div>
 					<div class="col-lg-2" id="user-basic-info">
-						<h2>{{loggedInUser.fullname}}<br></h2><h4>{{loggedInUser.designation}}</h4>
-						<h5>{{loggedInUser.emailId}}</h5>
+						<h3>{{loggedInUser.fullname}}<br></h3><h5>{{loggedInUser.designation}}</h5>
+						<h6>{{loggedInUser.emailId}}</h6>
 					</div>
 					<div class="col-lg-7">
-						<h1 class="subjectname"><ins><b>{{questions[0].subject.subjectName}}</b></ins></h1>
-						<h5>Maximum points : <b>{{questions[0].subject.subjectTotalMarks}}</b></h5>
-						<h5>Passing points : <b>{{questions[0].subject.subjectPassingMarks}}</b></h5>
+						<h5 class="subjectname"><ins><b>{{questions[0].subject.subjectName}}</b></ins></h5>
+						<h6>Maximum points : <b>{{questions[0].subject.subjectTotalMarks}}</b></h6>
+						<h6>Passing points : <b>{{questions[0].subject.subjectPassingMarks}}</b></h6>
 					</div>
 					<div class="col-lg-2" id="countdown">
 						<div id='tiles' class="color-full"></div>
@@ -48,11 +48,7 @@
 							    <tbody>
 							      <tr class="info">
 							        <td><span class="glyphicon glyphicon-circle-arrow-right"></span></td>
-							        <td>Total number of questions : <b>{{questions.length}}</b>.</td>
-							      </tr>
-							      <tr class="info">
-							        <td><span class="glyphicon glyphicon-circle-arrow-right"></span></td>
-							        <td>Time alloted : <b>{{questions[0].subject.subjectTimeInMinutes}}</b> minutes.</td>
+							        <td>Total number of questions : <b>{{questions.length}}</b>, Time alloted : <b>{{questions[0].subject.subjectTimeInMinutes}}</b> minutes.</td>
 							      </tr>
 							      <tr class="info">
 							        <td><span class="glyphicon glyphicon-circle-arrow-right"></span></td>
@@ -85,11 +81,11 @@
 					<div id="{{$index+1}}" class="tab-pane" data-ng-repeat="question in questions" data-ng-class="{'active': question == questions[0]}">
 						<div class="col-md-8" id="question-string">
 							<h4><b>Q. </b>{{question.questionString}}</h4>
-							<div class="col-lg-8" id="options" align="center">
-								<button class="option {{$index+1 + 'btnA'}}" data-ng-show="question.optionA.length != 0" data-ng-click="optsel($event, question.optionA)"><span class="span-option {{$index+1 + 'spnA'}}">{{question.optionA}}</span></button>
-								<button class="option {{$index+1 + 'btnB'}}" data-ng-show="question.optionB.length != 0" data-ng-click="optsel($event, question.optionB)"><span class="span-option {{$index+1 + 'spnB'}}">{{question.optionB}}</span></button>
-								<button class="option {{$index+1 + 'btnC'}}" data-ng-show="question.optionC.length != 0" data-ng-click="optsel($event, question.optionC)"><span class="span-option {{$index+1 + 'spnC'}}">{{question.optionC}}</span></button>
-								<button class="option {{$index+1 + 'btnD'}}" data-ng-show="question.optionD.length != 0" data-ng-click="optsel($event, question.optionD)"><span class="span-option {{$index+1 + 'spnD'}}">{{question.optionD}}</span></button> 				
+							<div id="options">
+								<button class="option {{$index+1 + 'btnA'}}" data-ng-show="question.optionA.length != 0" data-ng-click="optsel($event, question.optionA)"><span class="span-option {{$index+1 + 'spnA'}}" style="width: 200px; max-width: 200px;">{{question.optionA}}</span></button>
+								<button class="option {{$index+1 + 'btnB'}}" data-ng-show="question.optionB.length != 0" data-ng-click="optsel($event, question.optionB)"><span class="span-option {{$index+1 + 'spnB'}}" style="width: 200px; max-width: 200px;">{{question.optionB}}</span></button>
+								<button class="option {{$index+1 + 'btnC'}}" data-ng-show="question.optionC.length != 0" data-ng-click="optsel($event, question.optionC)"><span class="span-option {{$index+1 + 'spnC'}}" style="width: 200px; max-width: 200px;">{{question.optionC}}</span></button>
+								<button class="option {{$index+1 + 'btnD'}}" data-ng-show="question.optionD.length != 0" data-ng-click="optsel($event, question.optionD)"><span class="span-option {{$index+1 + 'spnD'}}" style="width: 200px; max-width: 200px;">{{question.optionD}}</span></button> 				
 							</div>
 						</div>
 					</div>
@@ -99,7 +95,7 @@
 				        <li data-ng-repeat="question in questions" id="li{{$index+1}}" data-ng-class="{'active': question == questions[0]}"><a data-toggle="tab" href="\#{{$index+1}}">{{$index+1}}</a></li>
 				  	</ul>
 				  	<div align="center">
-				  		<button type="button" class="btn btn-primary" data-ng-click="saveResult()"><h4><b>End Quiz</b></h4></button>
+				  		<button type="button" class="btn btn-primary btn-lg" data-ng-click="saveResult()"><b>End Quiz</b></button>
 				  	</div>
 				</div>
 

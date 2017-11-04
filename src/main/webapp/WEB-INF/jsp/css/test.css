@@ -20,12 +20,7 @@
 
 .subjectname
 {
-	font-size: large;
-}
-
-.btn
-{
-	margin: 5%;
+	margin-top: 3%;	
 }
 
 li > a
@@ -33,6 +28,7 @@ li > a
 	width: 40px; 
 	padding: 5px 5px 5px 5px; 
 	text-align: center;
+	font-size: medium;
 }
 
 #question-string
@@ -58,7 +54,7 @@ li > a
 .option
 {
 	margin-right: 15%;
-	margin-top: 5%;
+	margin-top: 2%;
 	font-weight: bold;
 	background-color: white; 
 	border: thin; 
@@ -135,5 +131,20 @@ li > a
 
 #piechart_3d {
 	width: 100%; 
-	height: 70%;
+	height: 10%;
+}
+
+#profile-photo
+{
+	padding-top: 1%;
+}
+
+#countdown
+{
+	margin-bottom: 1%;
+}
+
+td
+{
+	font-size: 13px;
 }

@@ -19,7 +19,7 @@
     bottom: 0;
     position: absolute;
     content: " ";
-    width: 100%;
+    width: 90%;
     height: 2px;
     background-color: #ccc;
     z-order: 0;
@@ -32,7 +32,7 @@
 }
 .btn-circle {
     text-align: center;
-    font-size: 12px;
+    font-size: 8px;
     line-height: 1.428571429;
 }
 .stepwizard-step a
@@ -64,7 +64,6 @@
 .subsel
 {
 	width: 90%;
-	/* width: 420px; */
 	height: 30px; 
 	border-radius: 10px;
 }

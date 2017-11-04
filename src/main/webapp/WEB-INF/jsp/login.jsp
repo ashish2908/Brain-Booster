@@ -21,7 +21,7 @@
 			<div class="row">
 				<div class="col-md-12" align="center" id="headicon">
 					<img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9f1Jp_edyP5BhNyNuCtHuispjff6UaVVZi3U8tpEwAxlYd1vD6g" style="height: 100px; widows: 100px;">
-					<h1><strong>Brain Booster</strong></h1>
+					<h3><strong>Brain Booster</strong></h3>
 					<h5  style="margin-bottom: 0;"> Welcome to Brain Booster quiz app, its free and always will be</h5>
 				</div>
 			</div>	

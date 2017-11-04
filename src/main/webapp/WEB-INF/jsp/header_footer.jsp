@@ -19,13 +19,13 @@
 			<div class="row" id="header">
 				<div class="col-md-12">
 					<div class="col-md-4">
-						<h1><span class="glyphicon glyphicon-education"></span> Brain Booster Quiz</h1>
+						<h3><span class="glyphicon glyphicon-education"></span> Brain Booster Quiz</h3>
 					</div>
 				</div>			
 			</div>
 			<div class="row" id="footer">
 				<div class="col-md-12" align="center">
-					<h5>© Copyrights Reserved | Ashish Bagul | Year-2017 </h5>
+					<h6>© Copyrights Reserved | Ashish Bagul | Year-2017 </h6>
 				</div>
 			</div>
 		</div>

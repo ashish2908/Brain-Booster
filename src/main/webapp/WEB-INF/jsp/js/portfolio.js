@@ -59,29 +59,26 @@ app.controller("Portfolio", function($scope, $http, $window, $location)
 				$scope.subjectTimeInMinutes = $scope.subjects[i].subjectTimeInMinutes;
  			}
 		}
-		saveSubject();
+		saveSubject(sub);
 	}
 	
 	/*This method saves subject selected by user*/
-	function saveSubject() 
+	function saveSubject(sub) 
 	{
 		$http
 		({
 			method : 'POST',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/selectedsubject',
-			data : $scope.subjectString,
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/selectedsubject?subject='+sub,
 			withCredentials : "true",
 			headers : 
 			{
-				'Accept' : 'application/json',
+				'Accept': 'application/json',
 				'Access-Control-Allow-Origin' : '*'
 			}
 		}).then(function successCallback(response) 
 		{
-			console.log("Subject saved");
 		}, 	function errorCallback(response) 
 		{
-			console.log(response.statusText);
 		});
 	}
 
