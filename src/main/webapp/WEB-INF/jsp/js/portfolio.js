@@ -9,7 +9,8 @@ app.controller("Portfolio", function($scope, $http, $window, $location)
 		$http
 		({
 			method : 'GET',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/loggedInUser',
+			/*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/loggedInUser',*/
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/quiz/loggedInUser',
 			withCredentials : "true",
 			headers : 
 			{
@@ -30,7 +31,8 @@ app.controller("Portfolio", function($scope, $http, $window, $location)
 		$http
 		({
 			method : 'GET',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getSubjects',
+			/*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getSubjects',*/
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/quiz/getSubjects',
 			withCredentials : "true",
 			headers : 
 			{
@@ -68,7 +70,8 @@ app.controller("Portfolio", function($scope, $http, $window, $location)
 		$http
 		({
 			method : 'POST',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/selectedsubject?subject='+sub,
+			/*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/selectedsubject?subject='+sub,*/
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/selectedsubject?subject='+sub,
 			withCredentials : "true",
 			headers : 
 			{

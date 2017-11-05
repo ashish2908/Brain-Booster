@@ -11,7 +11,8 @@ app.controller("Login", function($scope, $http, $window, $location) {
 		$http
 		({
 			method : 'POST',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/loggedInUser',
+			/*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/loggedInUser',*/
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/loggedInUser',
 			data : angular.toJson($scope.user),
 			withCredentials : "true",
 			headers : 

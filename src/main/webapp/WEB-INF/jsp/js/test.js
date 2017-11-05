@@ -97,7 +97,8 @@ app.controller("OnlineQuiz", function($scope, $http, $window, $location)
 		$http
 		({
 			method : 'POST',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/saveMarks',
+			/*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/saveMarks',*/
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/saveMarks',
 			data : count,
 			withCredentials : "true",
 			headers : 
@@ -119,7 +120,8 @@ app.controller("OnlineQuiz", function($scope, $http, $window, $location)
 		$http
 		({
 			method : 'GET',
-			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/loggedInUser',
+			/*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/loggedInUser',*/
+			url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/quiz/loggedInUser',
 			withCredentials : "true",
 			headers : 
 			{
@@ -141,7 +143,8 @@ app.controller("OnlineQuiz", function($scope, $http, $window, $location)
 		$http(
 			{
 			    method : 'GET',
-			    url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getQuestions',
+			    /*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getQuestions',*/
+			    url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/quiz/getQuestions',
 			    withCredentials : "true",
 			    headers : {
 				'Accept' : 'application/json',

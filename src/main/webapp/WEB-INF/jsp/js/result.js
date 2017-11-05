@@ -124,7 +124,8 @@ app.controller("result", function($scope, $http, $window, $location)
 		$http(
 			{
 			    method : 'GET',
-			    url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getResult',
+			    /*url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/Online_Quiz/quiz/getResult',*/
+			    url : $location.protocol()+'://'+$location.host()+':'+$location.port()+'/quiz/getResult',
 			    withCredentials : "true",
 			    headers : {
 				'Accept' : 'application/json',
