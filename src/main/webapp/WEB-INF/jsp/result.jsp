@@ -6,11 +6,10 @@
 <title>Result</title>
 <!-- Disabled Zooming -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:url" content="http://www.your-domain.com/your-page.html" />
+<meta property="og:url" content="https://1-dot-regal-tract-153809.appspot.com/" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Your Website Title" />
-<meta property="og:description" content="Your description" />
-<meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />
+<meta property="og:title" content="Quiz Application" />
+<meta property="og:description" content="Boost your brain here" />
 <link rel="stylesheet" href="css/result.css">
 </head>
 <body data-ng-app="result" data-ng-controller="result">
@@ -55,15 +54,16 @@
 									<td>{{result.user.emailId}}</td>
 									<td>{{result.subject.subjectName}}</td>
 									<td>{{result.marks}}</td>
-									<td style="color: {{btnclass"><strong>{{result.status}}</strong></td>
+									<td style="color: {{btnclass}}"><strong>{{result.status}}</strong></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<button class="btn btn-primary btn-md">
+					<button class="btn btn-primary btn-md" id="cmd">
 						<b>Download Certificate</b>
 					</button>
 				</div>
+				<div id="editor"></div>
 				<div class="col-md-4" align="center" >
 					<div class="row lead">
 						<h3 class="scorecard">
@@ -162,64 +162,58 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-8" align="center" style="margin-top: 5%; margin-bottom: 5%;">
 			<div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+				  <script>(function(d, s, id) {
+				    var js, fjs = d.getElementsByTagName(s)[0];
+				    if (d.getElementById(id)) return;
+				    js = d.createElement(s); js.id = id;
+				    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+				    fjs.parentNode.insertBefore(js, fjs);
+				  }(document, 'script', 'facebook-jssdk'));</script>
 
-  <!-- Your share button code -->
-  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
-			<!-- <div id="fb-root"></div>
-				<script>(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1063477887111184';
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
-				</script>
-				<div class="fb-share-button" data-href="https://www.google.com/" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-					<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a>
-				</div> -->
+				  <!-- Your share button code -->
+  				<div class="fb-share-button" data-href="https://1-dot-regal-tract-153809.appspot.com/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://1-dot-regal-tract-153809.appspot.com"><button>Share on facebook</button></a></div>
 		</div>
 		<div class="col-md-4">
 			<div class="row">
 				<div class="col-xs-12 col-md-12" style="display: inline-block;">
-					<textarea class="longInput" placeholder="Help us to improve" style="color: #3F729B; width: 100%; display: block; border-radius: 10px;" rows="4"></textarea>
-					<button class="btn btn-primary" style="position:absolute; bottom:10px; right:23px;">Comment</button>
-				</div>
-			</div>
-			<div class="row"  style="margin-top: 2%;">
-				<div class="col-sm-2">
-					<div class="thumbnail">
-						<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-					</div><!-- /thumbnail -->
-				</div><!-- /col-sm-1 -->
-				<div class="col-sm-10">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-						</div>
-						<div class="panel-body">
-							Panel content
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12" style="text-align: center;">
-					<a href="#">Load more comments</a>
+					<input hidden="" value="{{result.user.fullname}}" id="comment1">
+					<textarea id="comment2" class="longInput" placeholder="Help us to improve" style="color: #3F729B; width: 100%; display: block; border-radius: 10px;" rows="4"></textarea>
+					<button class="btn btn-primary" id="sendMessage" data-toggle="modal" data-target="#myModal" style="position:absolute; bottom:10px; right:23px;">Comment</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="text-align: center;">Feedback</h4>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-success">Thank you for your feedback, We will surely consider your opinionw </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content" align="center" style="display: none;">
+	<h1> Certificate of Excellence </h1>
+  </div>
+  
 	<!-- Start of external scripts -->
+	<script src="https://connect.facebook.net/en_US/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 	<script src="js/result.js"></script>
 	<!-- End of external scripts -->
 </body>

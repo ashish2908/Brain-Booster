@@ -70,7 +70,12 @@ app.controller("Login", function($scope, $http, $window, $location) {
 			{
 				$scope.user.username = userInfo.name;
 				$scope.user.fullname = userInfo.name;
-				$scope.user.emailId = userInfo.email;
+				if(userInfo.email.length < 2)
+				{
+					
+				}
+				else
+					$scope.user.emailId = userInfo.email;
 				$scope.user.designation = "Software Engineer";
 				$scope.user.profilePhoto = userInfo.picture.data.url;
 				saveUser();

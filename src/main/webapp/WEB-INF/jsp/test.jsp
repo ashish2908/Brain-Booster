@@ -95,7 +95,7 @@
 				        <li data-ng-repeat="question in questions" id="li{{$index+1}}" data-ng-class="{'active': question == questions[0]}"><a data-toggle="tab" href="\#{{$index+1}}">{{$index+1}}</a></li>
 				  	</ul>
 				  	<div align="center">
-				  		<button type="button" class="btn btn-primary btn-lg" data-ng-click="saveResult()"><b>End Quiz</b></button>
+				  		<button type="button" class="btn btn-primary btn-md" data-ng-click="saveResult()"><b>End Quiz</b></button>
 				  	</div>
 				</div>
 

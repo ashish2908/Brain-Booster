@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Quiz Header</title>
+		<title>Brain Booster Quiz</title>
 		<!-- including external css --> 
 		<link rel="stylesheet" href="css/header-footer.css">
 		<!-- JQuery Library -->

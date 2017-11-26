@@ -103,14 +103,25 @@ $(function() {
 });
 
 $( document ).ready(function() {
-      
+	var rating = 0;
+	
   $('#stars').on('starrr:change', function(e, value){
-	  alert(value);
+	  rating = value;
   });
   
   $('#stars-existing').on('starrr:change', function(e, value){
-	  alert(value);
+	  rating = value;
   });
+  
+  $("#sendMessage").on("click", function() {
+	  alert()
+	    $.ajax({
+	        url: "//formspree.io/bagulashish29@gmail.com", 
+	        method: "POST",
+	        data: {fullname: $('#comment1').val(), ratings: rating, comment: $('#comment2').val()},
+	        dataType: "json"
+	    });
+	});
 });
 
 var app = angular.module("result", []);
@@ -151,5 +162,41 @@ app.controller("result", function($scope, $http, $window, $location)
 			     console.log(response.statusText);
 			});
 	 }
+	
+	var doc = new jsPDF();
+
+	var specialElementHandlers = {
+	    '#editor': function (element, renderer) {
+	        return true;
+	    }
+	};
+	$('#cmd').click(function () { 
+		doc.fromHTML($('#content').html(), 70, 15, {
+	        'width': 170,
+	            'elementHandlers': specialElementHandlers
+	    });
+		doc.setFont("courier");
+		doc.setFontType("normal");
+		doc.text(20, 60, 'This certifies that');
+		doc.setFont("courier");
+		doc.setFontType("bold");
+		doc.text(90, 60, '"'+$scope.result.user.fullname+'"');
+		doc.setFont("courier");
+		doc.setFontType("normal");
+		doc.text(20, 70, 'has cleared');
+		doc.setFont("courier");
+		doc.setFontType("bold");
+		doc.text(60, 70, '"'+$scope.result.subject.subjectName+'",');
+		doc.setFont("courier");
+		doc.setFontType("normal");
+		doc.text(20, 80, 'dated on');
+		doc.setFont("courier");
+		doc.setFontType("bold");
+		var date = new Date();
+		var dt = date.getMonth() + 1 + '/' + date.getDate() + '/' +  date.getFullYear() + '.';
+		doc.text(50, 80, dt);
+	    doc.save('IQ-Result.pdf');
+	});
+	
 	
 }); 
